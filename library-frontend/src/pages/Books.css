@@ -1,0 +1,115 @@
+/* Books Container with a modern gradient background */
+.books-container {
+    padding: 2rem;
+    background: linear-gradient(135deg, #f9f9f9, #eaeaea);
+    min-height: calc(100vh - 80px);
+  }
+  
+  /* Heading styling with a futuristic touch */
+  .books-heading {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #333;
+    font-weight: bold;
+  }
+  
+  /* Search Form Styling */
+  .search-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+  
+  .search-input {
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 6px 0 0 6px;
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    width: 300px;
+  }
+  
+  .search-input:focus {
+    border-color: #2e7d32;
+    box-shadow: 0 0 8px rgba(46, 125, 50, 0.3);
+  }
+  
+  .search-button {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border: 1px solid #2e7d32;
+    border-left: none;
+    border-radius: 0 6px 6px 0;
+    background-color: #2e7d32;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .search-button:hover {
+    background-color: #1b5e20;
+    transform: translateY(-2px);
+  }
+  
+  /* Books Grid Layout for responsive cards */
+  .books-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+  }
+  
+  /* Glassmorphism Book Card */
+  .book-card {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 12px;
+    padding: 1.5rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .book-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Book Title & Author Styling */
+  .book-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #2e7d32;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .book-title:hover {
+    color: #1b5e20;
+  }
+  
+  .book-author {
+    font-size: 1rem;
+    color: #555;
+    margin-top: 0.5rem;
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    .books-heading {
+      font-size: 2rem;
+    }
+    .search-input {
+      width: 250px;
+    }
+    .book-title {
+      font-size: 1.3rem;
+    }
+    .book-author {
+      font-size: 0.9rem;
+    }
+  }
+  

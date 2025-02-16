@@ -1,0 +1,68 @@
+/* Container with a subtle futuristic background */
+.authors-container {
+    padding: 2rem;
+    background: linear-gradient(135deg, #f0f0f0, #e0e0e0);
+    min-height: calc(100vh - 80px);
+  }
+  
+  /* Heading styling with a futuristic touch */
+  .authors-heading {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #333;
+    font-weight: bold;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Responsive grid layout for author cards */
+  .authors-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+  }
+  
+  /* Glassmorphism effect for each author card */
+  .author-card {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 12px;
+    padding: 1.5rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Hover effect for an interactive feel */
+  .author-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Author name styling */
+  .author-name {
+    font-size: 1.5rem;
+    color: #2e7d32; /* Dark green for a futuristic accent */
+    margin-bottom: 0.5rem;
+  }
+  
+  /* Author bio styling */
+  .author-bio {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.5;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .authors-heading {
+      font-size: 2rem;
+    }
+    .author-name {
+      font-size: 1.3rem;
+    }
+    .author-bio {
+      font-size: 0.95rem;
+    }
+  }
+  

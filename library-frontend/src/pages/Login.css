@@ -1,0 +1,161 @@
+/* Container with Dynamic Gradient Background & Fade-In Animation */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #e0f7fa, #c8e6c9);
+  padding: 20px;
+  animation: fadeIn 1.2s ease-in-out;
+}
+
+/* Advanced Glassmorphism Login Card */
+.login-card {
+  background: rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(7, 7, 7, 0.3);
+  border-radius: 16px;
+  padding: 40px 50px;
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  animation: slideInUp 0.8s ease-in-out;
+}
+
+/* Title Styling */
+.login-title {
+  font-size: 2.2rem;
+  color: #2e7d32; /* Dark green */
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+/* Subtitle Styling */
+.login-subtitle {
+  font-size: 1rem;
+  color: #111010;
+  margin-bottom: 30px;
+}
+
+/* Form Styling */
+.login-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.form-label {
+  font-size: 0.9rem;
+  color: #0c0c0c;
+  margin-bottom: 5px;
+  display: block;
+  font-weight: 600;
+}
+
+/* Input Fields with Transparent Background & Focus Glow */
+.form-input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid rgba(32, 31, 31, 0.3);
+  border-radius: 6px;
+  font-size: 1rem;
+  background: rgba(8, 8, 8, 0.2);
+  color: #141212;
+  outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-input::placeholder {
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.form-input:focus {
+  border-color: #2e7d32;
+  box-shadow: 0 0 8px rgba(46, 125, 50, 0.3);
+}
+
+/* Login Button with Hover Lift & Shadow */
+.login-button {
+  background-color: #2e7d32;
+  color: #178014;
+  padding: 14px;
+  border: none;
+  border-radius: 6px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin-top: 10px;
+}
+
+.login-button:hover {
+  background-color: #1b5e20;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(27, 94, 32, 0.3);
+}
+
+/* Footer Links Styling */
+.login-footer {
+  margin-top: 20px;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.login-footer a {
+  color: #2e7d32;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.login-footer a:hover {
+  color: #1b5e20;
+  text-decoration: underline;
+}
+
+/* Keyframe Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .login-card {
+    padding: 30px 20px;
+  }
+  .login-title {
+    font-size: 1.8rem;
+  }
+  .login-subtitle {
+    font-size: 0.9rem;
+  }
+  .form-input {
+    font-size: 0.95rem;
+    padding: 10px;
+  }
+  .login-button {
+    font-size: 1rem;
+    padding: 12px;
+  }
+}

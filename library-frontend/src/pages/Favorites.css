@@ -1,0 +1,129 @@
+/* Container for the Favorites Page with a subtle futuristic background */
+.favorites-container {
+    padding: 2rem;
+    background: linear-gradient(135deg, #f0f0f0, #e0e0e0);
+    min-height: calc(100vh - 80px);
+  }
+  
+  /* Headings styling */
+  .favorites-heading,
+  .recommendations-heading {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 1.5rem;
+    font-weight: bold;
+  }
+  
+  /* Grid layout for favorite cards */
+  .favorites-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  /* Glassmorphism style for each favorite card */
+  .favorite-card {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 12px;
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .favorite-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  .favorite-info {
+    text-align: left;
+  }
+  
+  .favorite-title {
+    font-size: 1.5rem;
+    color: #2e7d32;
+    margin: 0;
+  }
+  
+  .favorite-author {
+    font-size: 1rem;
+    color: #555;
+    margin-top: 0.5rem;
+  }
+  
+  /* Remove button styling */
+  .remove-button {
+    background-color: #d32f2f;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .remove-button:hover {
+    background-color: #c62828;
+    transform: scale(1.05);
+  }
+  
+  /* Grid layout for recommendation cards */
+  .recommendations-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  /* Recommendation card styling */
+  .recommendation-card {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 12px;
+    padding: 1.5rem;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .recommendation-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  .recommendation-title {
+    font-size: 1.5rem;
+    color: #2e7d32;
+    margin: 0;
+  }
+  
+  .recommendation-author {
+    font-size: 1rem;
+    color: #555;
+    margin-top: 0.5rem;
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    .favorites-heading,
+    .recommendations-heading {
+      font-size: 2rem;
+    }
+    .favorite-title,
+    .recommendation-title {
+      font-size: 1.3rem;
+    }
+    .favorite-author,
+    .recommendation-author {
+      font-size: 0.9rem;
+    }
+  }
+  

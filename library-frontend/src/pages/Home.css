@@ -1,0 +1,129 @@
+/* Home Container with Futuristic Background and Animation */
+.home-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #1f4037, #99f2c8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Animated Starfield Overlay for a Futuristic Vibe */
+.home-container::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background-image: radial-gradient(circle, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+  background-size: 50px 50px;
+  animation: rotateBg 20s linear infinite;
+  z-index: 0;
+}
+
+@keyframes rotateBg {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Home Content Styling */
+.home-content {
+  position: relative;
+  text-align: center;
+  z-index: 1;
+  color: #fff;
+  max-width: 800px;
+}
+
+/* Title and Subtitle Animations */
+.home-title {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  animation: fadeInDown 1s ease-out;
+}
+
+.home-subtitle {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  animation: fadeInUp 1s ease-out;
+}
+
+/* Button Container Styling */
+.home-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+/* Button Styling with Interactive Effects */
+.home-button {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border-radius: 30px;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Primary Button Style */
+.home-button-primary {
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+}
+
+/* Secondary Button Style */
+.home-button-secondary {
+  background: transparent;
+  color: #fff;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+}
+
+/* Button Hover Effects */
+.home-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+}
+
+/* Fade-in Animations */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .home-title {
+    font-size: 2.5rem;
+  }
+  .home-subtitle {
+    font-size: 1.2rem;
+  }
+  .home-button {
+    font-size: 0.9rem;
+    padding: 0.6rem 1.2rem;
+  }
+}

@@ -1,0 +1,93 @@
+/* Register.css */
+.register-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #e0f7fa, #c8e6c9); /* Light greenish gradient */
+    padding: 20px;
+  }
+  
+  .register-card {
+    background: white;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .register-title {
+    font-size: 2rem;
+    color: #2e7d32; /* Dark green */
+    margin-bottom: 10px;
+  }
+  
+  .register-subtitle {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 30px;
+  }
+  
+  .register-form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+    text-align: left;
+  }
+  
+  .form-label {
+    font-size: 0.9rem;
+    color: #333;
+    margin-bottom: 5px;
+    display: block;
+  }
+  
+  .form-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+  }
+  
+  .form-input:focus {
+    border-color: #2e7d32; /* Dark green */
+    outline: none;
+  }
+  
+  .register-button {
+    background-color: #2e7d32; /* Dark green */
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .register-button:hover {
+    background-color: #1b5e20; /* Darker green */
+  }
+  
+  .register-footer {
+    margin-top: 20px;
+    font-size: 0.9rem;
+    color: #666;
+  }
+  
+  .register-footer a {
+    color: #2e7d32; /* Dark green */
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .register-footer a:hover {
+    text-decoration: underline;
+  }

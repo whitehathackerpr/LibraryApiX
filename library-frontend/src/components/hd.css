@@ -1,0 +1,157 @@
+/* Header Styling */
+.custom-header {
+  background: linear-gradient(90deg, #38b000, #000000);
+  color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  animation: slideInDown 0.5s ease-out;
+  position: relative;
+  overflow: hidden;
+  padding: 10px 0;
+}
+
+/* Futuristic Shine Effect on Header */
+.custom-header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -150%;
+  width: 150%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.2) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: skewX(-25deg);
+  animation: shine 3s infinite;
+}
+
+/* Navigation Links with Futuristic Underline Animation */
+.custom-link {
+  position: relative;
+  font-size: 1.2rem;
+  color: #fff;
+  text-decoration: none;
+  margin-right: 1rem;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.custom-link:hover {
+  color: #000000;
+  transform: translateY(-2px);
+}
+
+/* Underline Effect */
+.custom-link::after {
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: #000000;
+  transition: width 0.3s ease, left 0.3s ease;
+}
+
+.custom-link:hover::after {
+  left: 0;
+  width: 100%;
+}
+
+/* Buttons with Futuristic Styling */
+.custom-btn {
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+  border: none;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 30px;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  color: #fff;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.custom-btn:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #000;
+  transform: scale(1.1);
+}
+
+/* Animation for Header Shine */
+@keyframes shine {
+  0% {
+    left: -150%;
+  }
+  50% {
+    left: 100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+/* Animation for Slide In Down */
+@keyframes slideInDown {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Desktop Navigation Menu */
+.nav-menu {
+  display: flex;
+  align-items: center;
+}
+
+/* Hamburger Menu (hidden on desktop) */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  border: none;
+  background: transparent;
+  z-index: 1001;
+}
+
+.hamburger .bar {
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  margin: 4px 0;
+  transition: all 0.3s ease;
+}
+
+/* Mobile Navigation Menu */
+.mobile-nav {
+  background: linear-gradient(90deg, #38b000, #000000);
+  padding: 1rem;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  animation: slideInDown 0.3s ease-out;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .custom-link {
+    font-size: 1rem;
+    margin-right: 0;
+    padding: 0.5rem 0;
+  }
+  .custom-btn {
+    font-size: 0.9rem;
+  }
+  /* Hide desktop nav and show hamburger */
+  .nav-menu {
+    display: none;
+  }
+  .hamburger {
+    display: flex;
+  }
+}
